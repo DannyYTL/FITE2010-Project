@@ -1,6 +1,6 @@
 # FITE2010-Project
-Personal project for HKU course FITE2010 - Distributed Ledger and Blockchain
-- By Yao Tianle (UID: 3036253691)
+## Personal project for HKU course FITE2010 - Distributed Ledger and Blockchain
+### By Yao Tianle (UID: 3036253691)
 - Overview:
 <br> This project implements a decentralized insurance system for crop farmers using blockchain technology. Traditional crop insurance often suffers from slow claim processing, ambiguous policy terms, and potential conflicts of interest between insurance providers and farmers. Our smart contract solution addresses these challenges through automation, transparency, and immutable execution.
 - Problem Statement
@@ -28,9 +28,19 @@ High administrative costs: Traditional insurance involves significant overhead
 <br> - Processes the payout to the farmer's wallet
 <br> - Updates the policy status
 - Technical Implementation
-<br> This project leverages Ethereum smart contracts written in Solidity
+<br> This project leverages Ethereum smart contracts written in Solidity; and the testing of project runs on Ethereum wallet with testnet ETH (for Sepolia testnet)
 - Potential Future Enhancements
 <br> - Integration with real-world oracle services like Chainlink for verified weather data
 <br> - Support for parametric insurance with partial payouts based on severity
 <br> - Pooled risk management to optimize capital efficiency
 <br> - Mobile dApp interface for farmers to manage policies
+
+### Setup and Deployment
+- Install dependencies with command:
+<br> npm install
+
+- Deploy to Sepolia testnet with command:
+<br> npx hardhat run scripts/deploy.js --network sepolia
+
+- Interact with the deployed contract with command:
+<br> npx hardhat run scripts/interact.js --network sepolia

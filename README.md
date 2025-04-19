@@ -44,3 +44,6 @@ High administrative costs: Traditional insurance involves significant overhead
 
 - Interact with the deployed contract with command:
 <br> npx hardhat run scripts/interact.js --network sepolia
+
+### Sample run result:
+![Crop Insurance System](sample_run.png)

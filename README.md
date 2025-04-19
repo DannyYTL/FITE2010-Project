@@ -7,10 +7,10 @@
 -------------------
 - Problem Statement
 <br> Agricultural producers face significant risks from extreme weather events such as excessive rainfall, drought, and frost. Traditional insurance solutions present several challenges:
-Delayed payouts: Manual verification processes can take weeks or months
-Policy ambiguity: Terms may be subject to interpretation or dispute
-Trust issues: Farmers must rely on insurance companies to honor claims fairly
-High administrative costs: Traditional insurance involves significant overhead
+<br> 1. Delayed payouts: Manual verification processes can take weeks or months
+<br> 2. Policy ambiguity: Terms may be subject to interpretation or dispute
+<br> 3. Trust issues: Farmers must rely on insurance companies to honor claims fairly
+<br> 4. High administrative costs: Traditional insurance involves significant overhead
 -------------------
 - Solution
 <br> This smart contract implements an automated, transparent crop insurance platform with the following features:

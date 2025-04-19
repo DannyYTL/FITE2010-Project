@@ -34,6 +34,7 @@
 -------------------
 - Technical Implementation
 <br> This project leverages Ethereum smart contracts written in Solidity; and the testing of project runs on Ethereum wallet with testnet ETH (for Sepolia testnet)
+-------------------
 - Potential Future Enhancements
 <br> - Integration with real-world oracle services like Chainlink for verified weather data
 <br> - Support for parametric insurance with partial payouts based on severity

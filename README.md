@@ -1,7 +1,36 @@
 # FITE2010-Project
 Personal project for HKU course FITE2010 - Distributed Ledger and Blockchain
-By Yao Tianle (UID: 3036253691)
-
-This project is about 'Insurance for Crops'. In real life, some farmers may purchase insurance policies to prevent extreme severe weather affect their revenue from crop products. But sometimes the insurance policies they purchased may take long time to pay them back after certain conditions are met due to human-checking in the process. Moreover, sometimes ambiguities in the policies may even result into interest conflicts between the insurance companies and farmers who purchased the policies.
-
-In my smart contract project, all the policy statements are explicitly written in code. Everyone who would like to purchase the policies can manually examine the source codes. And the contract will automatically execute and pay the insurance policies' buyer the pre-determined cover amount once certain pre-determined thresholds are met.
+- By Yao Tianle (UID: 3036253691)
+- Overview:
+<br> This project implements a decentralized insurance system for crop farmers using blockchain technology. Traditional crop insurance often suffers from slow claim processing, ambiguous policy terms, and potential conflicts of interest between insurance providers and farmers. Our smart contract solution addresses these challenges through automation, transparency, and immutable execution.
+- Problem Statement
+<br> Agricultural producers face significant risks from extreme weather events such as excessive rainfall, drought, and frost. Traditional insurance solutions present several challenges:
+Delayed payouts: Manual verification processes can take weeks or months
+Policy ambiguity: Terms may be subject to interpretation or dispute
+Trust issues: Farmers must rely on insurance companies to honor claims fairly
+High administrative costs: Traditional insurance involves significant overhead
+- Solution
+<br> This smart contract implements an automated, transparent crop insurance platform with the following features:
+<br> - Instant payouts: Claims are processed automatically when weather thresholds are met
+<br> - Transparent terms: All policy conditions are explicitly coded in the contract
+<br> - Trustless execution: Once deployed, the contract executes according to predefined rules without human intervention
+<br> - Reduced costs: Automation eliminates administrative overhead and reduces premiums
+- How It Works
+<br> - Policy Creation: Farmers create customized policies by specifying: 
+<br> - Location (coordinates)
+<br> - Weather condition to insure against (excess rain, drought, or frost)
+<br> - Threshold value that triggers a payout
+<br> - Policy duration
+<br> - Premium Payment: Farmers pay a premium that is proportional to the coverage amount
+<br> - Weather Monitoring: The contract connects to weather data feeds (simulated in this implementation)
+<br> - Automatic Execution: When weather conditions exceed the specified threshold, the contract automatically:
+<br> - Verifies the policy is active
+<br> - Processes the payout to the farmer's wallet
+<br> - Updates the policy status
+- Technical Implementation
+<br> This project leverages Ethereum smart contracts written in Solidity
+- Potential Future Enhancements
+<br> - Integration with real-world oracle services like Chainlink for verified weather data
+<br> - Support for parametric insurance with partial payouts based on severity
+<br> - Pooled risk management to optimize capital efficiency
+<br> - Mobile dApp interface for farmers to manage policies

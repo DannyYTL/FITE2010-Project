@@ -21,10 +21,10 @@
 -------------------
 - How It Works
 <br> - Policy Creation: Farmers create customized policies by specifying: 
-<br> - Location (coordinates)
-<br> - Weather condition to insure against (excess rain, drought, or frost)
-<br> - Threshold value that triggers a payout
-<br> - Policy duration
+<br> Location (coordinates);
+<br> Weather condition to insure against (excess rain, drought, or frost);
+<br> Threshold value that triggers a payout;
+<br> Policy duration;
 <br> - Premium Payment: Farmers pay a premium that is proportional to the coverage amount
 <br> - Weather Monitoring: The contract connects to weather data feeds (simulated in this implementation)
 <br> - Automatic Execution: When weather conditions exceed the specified threshold, the contract automatically:

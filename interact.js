@@ -11,7 +11,8 @@ async function main() {
   // Get the deployer account
   const [deployer] = await ethers.getSigners();
   console.log("Interacting with contract using account:", deployer.address);
-  
+  console.log();
+
   // Check account balance
   const initialAccountBalance = await deployer.getBalance();  // Changed variable name to initialAccountBalance
   console.log("Account balance:", ethers.utils.formatEther(initialAccountBalance), "ETH");
@@ -29,7 +30,8 @@ async function main() {
   
   console.log("Will fund contract with:", ethers.utils.formatEther(actualFundAmount), "ETH");
   console.log("Will create policy with premium:", ethers.utils.formatEther(premium), "ETH");
-  
+  console.log();
+
   // Add a location if needed
   console.log("Adding a location...");
   let locationGasCost = ethers.BigNumber.from(0);             // variable to track location gas cost
@@ -43,7 +45,8 @@ async function main() {
   } catch (error) {
     console.log("Error adding location (may already exist):", error.message);
   }
-  
+  console.log();
+
   // Send some ETH to the contract to cover payouts
   console.log("Funding contract with ETH for payouts...");
   let fundingGasCost = ethers.BigNumber.from(0);              // variable to track funding gas cost
@@ -61,7 +64,8 @@ async function main() {
     console.log("Error funding contract:", error.message);
     return;                           // Exit if funding fails
   }
-  
+  console.log();
+
   // Create a policy
   console.log("Creating a policy...");
   let policyGasCost = ethers.BigNumber.from(0);  // variable to track policy creation gas cost
@@ -86,12 +90,14 @@ async function main() {
     console.log("Error creating policy:", error.message);
     return;                           // Exit if policy creation fails
   }
+  console.log();
 
   // Track the total gas cost for all transactions so far
   const totalGasCostSoFar = locationGasCost.add(fundingGasCost).add(policyGasCost);  // Include all gas costs
    
   console.log("Gas cost so far:", ethers.utils.formatEther(totalGasCostSoFar), "ETH");
-   
+  console.log();
+
   // Calculate what the balance should be after funding and creating policy (including gas)
   const expectedBalanceBeforePayout = initialAccountBalance
     .sub(actualFundAmount)      // Subtract funds sent to contract
@@ -103,6 +109,7 @@ async function main() {
    
   console.log("Expected balance before payout:", ethers.utils.formatEther(expectedBalanceBeforePayout), "ETH");
   console.log("Actual balance before payout:", ethers.utils.formatEther(actualBalanceBeforePayout), "ETH");
+  console.log();
 
   // Get policy details and save coverage amount
   let coverageAmount = ethers.BigNumber.from(0);  // variable to track coverage amount
@@ -124,7 +131,8 @@ async function main() {
   } catch (error) {
     console.log("Error getting policy details:", error.message);
   }
-  
+  console.log();
+
   // Check contract balance
   let contractBalanceBeforePayout;            // variable for contract balance before payout
   try {
@@ -133,7 +141,8 @@ async function main() {
   } catch (error) {
     console.log("Error getting contract balance:", error.message);
   }
-  
+  console.log();
+
   // Simulate weather data
   console.log("Simulating weather data...");
   let weatherGasCost = ethers.BigNumber.from(0);      // variable to track weather simulation gas cost
@@ -154,7 +163,8 @@ async function main() {
   } catch (error) {
     console.log("Error simulating weather data:", error.message);
   }
-  
+  console.log();
+
   // Get policy details again (should be paid out)
   let policyPaidOut = false;                          // variable to track if policy was paid out
   try {
@@ -165,7 +175,8 @@ async function main() {
     // Check if policy was paid out
     policyPaidOut = updatedPolicyDetails[7].toString() === "2";               // 2 = PaidOut
     console.log("Policy paid out:", policyPaidOut ? "Yes" : "No");
-    
+    console.log();
+
     if (policyPaidOut) {
       // If paid out, we expect to see the coverage amount in the farmer's account
       console.log("Coverage amount received:", ethers.utils.formatEther(coverageAmount), "ETH");
@@ -186,7 +197,8 @@ async function main() {
   } catch (error) {
     console.log("Error getting updated contract balance:", error.message);
   }
-  
+  console.log();
+
   // Get farmer's balance after payout
   const balanceAfterPayout = await deployer.getBalance();
   console.log("Balance after payout:", ethers.utils.formatEther(balanceAfterPayout), "ETH");
@@ -210,6 +222,7 @@ async function main() {
   // Calculate the difference between actual and expected balance
   const balanceDifference = balanceAfterPayout.sub(expectedBalanceAfterPayout);
   console.log("Balance difference (actual - expected):", ethers.utils.formatEther(balanceDifference), "ETH");
+  console.log();
   
   // Verify the balance change
   if (policyPaidOut) {

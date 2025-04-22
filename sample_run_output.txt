@@ -1,0 +1,53 @@
+Interacting with contract using account: 0xf8C0D33a21D68C70C2307AEa088ce9ae38f82987
+
+Account balance: 0.08349911633296351 ETH
+Will fund contract with: 0.0005 ETH
+Will create policy with premium: 0.0001 ETH
+
+Adding a location...
+Location 1 added
+Location gas cost: 0.000000914612185432 ETH
+
+Funding contract with ETH for payouts...
+Contract funded with 0.0005 ETH
+Funding gas cost: 0.000001327008534825 ETH
+
+Creating a policy...
+Policy created
+Policy creation gas cost: 0.00000475077263052 ETH
+
+Gas cost so far: 0.000006992393350777 ETH
+
+Expected balance before payout: 0.082892123939612733 ETH
+Actual balance before payout: 0.082892123939612733 ETH
+
+Policy Details:
+  Farmer: 0xf8C0D33a21D68C70C2307AEa088ce9ae38f82987
+  Location ID: 1
+  Condition: 0
+  Premium: 0.0001 ETH
+  Coverage Amount: 0.0003 ETH
+  Threshold: 80
+  Expiry Date: 5/19/2025, 8:04:00 AM
+  Status: 2
+
+Contract balance before payout: 0.002 ETH
+
+Simulating weather data...
+Weather data simulated: 85
+Weather simulation gas cost: 0.000002243447479565 ETH
+
+Updated Policy Status: 2
+Policy paid out: Yes
+
+Coverage amount received: 0.0003 ETH
+Contract balance after payout: 0.0017 ETH
+Amount paid out from contract: 0.0003 ETH
+
+Balance after payout: 0.083189880492133168 ETH
+Expected balance after payout (including gas costs): 0.083189880492133168 ETH
+Actual balance after payout: 0.083189880492133168 ETH
+Balance difference (actual - expected): 0.0 ETH
+
+✅ VERIFICATION SUCCESSFUL: Farmer received the correct payout amount!
+Interaction complete

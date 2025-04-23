@@ -69,6 +69,7 @@ contract CropInsurance is Ownable, ReentrancyGuard {
      * @param _longitude Longitude of the location
      */
     function addLocation(uint256 _locationId, string memory _latitude, string memory _longitude) external onlyOwner {
+        // _locationId validation to be implemented; the string memory may be changed to string calldata to save gas cost
         locationToLatitude[_locationId] = _latitude;
         locationToLongitude[_locationId] = _longitude;
         emit LocationAdded(_locationId, _latitude, _longitude);

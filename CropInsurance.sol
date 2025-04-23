@@ -181,7 +181,7 @@ contract CropInsurance is Ownable, ReentrancyGuard {
 
         require(policy.status == PolicyStatus.Active, "Policy not active");
         
-        // Mark policy as paid out regardless of available funds
+        // Mark policy as paid out regardless of available funds; partial payout need to be implemented
         policy.status = PolicyStatus.PaidOut;
         
         // Check contract balance and adjust payout amount if needed

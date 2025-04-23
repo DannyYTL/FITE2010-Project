@@ -136,6 +136,8 @@ contract CropInsurance is Ownable, ReentrancyGuard {
         WeatherCondition _condition,
         uint256 _weatherValue
     ) internal {
+        // Policy ID Assumptions: The code assumes policy IDs are sequential and start at 1, 
+        // with no gaps from deleted policies (need to be implemented, so to reduce the no. of policies to check)
         for (uint256 i = 1; i < nextPolicyId; i++) {
             Policy storage policy = policies[i];
             

@@ -229,7 +229,7 @@ contract CropInsurance is Ownable, ReentrancyGuard {
      * @dev Allow contract owner to withdraw funds
      */
     function withdraw() external onlyOwner {
-        payable(owner()).transfer(address(this).balance);
+        payable(owner()).transfer(address(this).balance);        // .transfer() is limited to 2300 gas
     }
     
     /**

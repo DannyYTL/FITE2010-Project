@@ -82,14 +82,16 @@ contract CropInsurance is Ownable, ReentrancyGuard {
      * @param _threshold Weather threshold that triggers a payout
      * @param _expiryDays Number of days until policy expires
      */
-    function createPolicy(uint256 _locationId, WeatherCondition _condition, uint256 _threshold, uint256 _expiryDays) external payable {
+    function createPolicy(uint256 _locationId, WeatherCondition _condition, uint256 _threshold, uint256 _expiryDays) external payable {    // payable - can receive ethers
         require(bytes(locationToLatitude[_locationId]).length > 0, "Location does not exist");
         require(msg.value > 0, "Premium must be greater than 0");
         require(_expiryDays > 0, "Expiry must be in the future");
         
         uint256 policyId = nextPolicyId++;
         uint256 coverageAmount = msg.value * 3; // Coverage is 3x the premium
-        uint256 expiryDate = block.timestamp + (_expiryDays * 1 days);
+        // block.timestamp - the current block's timestamp
+        // 1 day - Solidity time unit equal to 86400 seconds
+        uint256 expiryDate = block.timestamp + (_expiryDays * 1 days);            
         
         policies[policyId] = Policy({
             farmer: msg.sender,

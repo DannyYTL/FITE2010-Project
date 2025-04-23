@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 // weather conditions exceed pre-determined thresholds, without requiring manual claims processing
 
 // the contract inherits from two OpenZeppelin base contracts
-// Ownable: Provides basic authorization control, restricting certain functions to the contract owner (typically the insurance provider)
+// Ownable: Provides basic authorization control, restricting certain functions to the contract owner
 // ReentrancyGuard: Prevents reentrant attacks during fund transfers
 contract CropInsurance is Ownable, ReentrancyGuard {       
     // Weather conditions that can trigger insurance payouts

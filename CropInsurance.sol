@@ -276,5 +276,5 @@ contract CropInsurance is Ownable, ReentrancyGuard {
     /**
      * @dev Allow contract to receive ETH
      */
-    receive() external payable {}
+    receive() external payable {}            // may implement an event to acknowledge ethers are received - emit EtherReceived(msg.sender, msg.value);
 }

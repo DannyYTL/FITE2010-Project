@@ -171,7 +171,7 @@ contract CropInsurance is Ownable, ReentrancyGuard {
      * @param _policyId ID of the policy to pay out
      * @param _weatherValue Weather value that triggered the payout
      */
-    function executePayoutForPolicy(uint256 _policyId, uint256 _weatherValue) internal nonReentrant {
+    function executePayoutForPolicy(uint256 _policyId, uint256 _weatherValue) internal nonReentrant {    // The nonReentrant modifier is a security feature that prevents reentrancy attacks
         Policy storage policy = policies[_policyId];
 
         // Check if policy has expired before processing
